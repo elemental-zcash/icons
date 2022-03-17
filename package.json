@@ -1,0 +1,48 @@
+{
+  "name": "@elemental-zcash/icons",
+  "version": "0.0.1-beta.0",
+  "description": "Cross-platform Icon Library",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    },
+    "./*": {
+      "require": "./lib/*.js",
+      "import": "./lib/*.mjs"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf lib/",
+    "build:script": "node scripts/build.mjs",
+    "build:types": "tsc -d tsconfig.json",
+    "build:js": "tsc -p tsconfig.json",
+    "build": "npm run build:script && npm run build:js && npm run build:types",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elemental-zcash/icons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elemental-zcash/icons/issues"
+  },
+  "homepage": "https://github.com/elemental-zcash/icons#readme",
+  "devDependencies": {
+    "@react-platform/svg": "0.0.1",
+    "@svgr/core": "^6.2.1",
+    "@svgr/plugin-jsx": "^6.2.1",
+    "@svgr/plugin-prettier": "^6.1.2",
+    "fs-extra": "^10.0.1",
+    "prettier": "^2.6.0",
+    "react": "^17.0.2",
+    "typescript": "^4.6.2"
+  },
+  "peerDependencies": {
+    "react": "^16 || ^17 || ^18"
+  }
+}
